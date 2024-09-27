@@ -1,0 +1,6 @@
+#3 упр
+numbers = list(map(int, input().split()))
+n = 1
+for i in numbers:
+    n = i*n
+print ((n)**(1/len(numbers)))

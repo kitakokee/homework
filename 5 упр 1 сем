@@ -1,0 +1,40 @@
+n = int(input())    # число
+b = int(input())    # основание системы счисления, в которой оно записано (b<=10)
+c = int(input())   # основание системы счисления, в которую его надо перевести (c<=10)
+s = ""
+if  b != 10 and c == 10:
+    n_1 = str(n)
+    answer = 0
+    power = 0
+    n_2 = n_1[::-1]
+    for i in n_2:
+        answer += int(i)*(b**power)
+        power += 1
+    print(answer)
+
+elif b == 10:
+    while n > 0:
+        s = str(n % c) + s
+        n //= c
+    print(s)
+
+elif b != 10 and c != 10:
+    n_1 = str(n)
+    number = 0
+    power2 = 0
+    n_2 = n_1[n::-1]
+    for i in n_2:
+        number += int(i)*(b**power2)
+        power2 += 1
+    while number > 0:
+        s = str(number % c) + s
+        number //= c
+    print(s)
+    
+
+
+
+
+
+
+    
